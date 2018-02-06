@@ -40,7 +40,7 @@ nav {
 
 * {
     box-sizing: border-box;
-
+    font-family: lato, roboto, helvetica;
 }
 
 body {
@@ -99,6 +99,59 @@ header h3 {
   font-size: 15px;
   opacity: 0;
 }
+
+@media only screen and (max-width: 346px) {
+  #h-nav {
+  padding-top: 25px;  
+}
+  #c-nav {
+  margin-top: 50px;
+  margin-right: 0px;
+  }
+  
+  #c-nav a {
+  padding-right: 0px;
+  padding-left: 15px;
+  }
+  
+  #contact-nav nav {
+  padding-right: 0px;
+  }
+}
+
+@media only screen and (max-width: 568px) {
+
+  #c-nav {
+  margin-top: 40px;
+  }
+  #contact-top {
+    height: 100px;
+  }
+  #about-footer div {
+    margin: 0;
+    float: right;
+  }
+  #about-footer div img:last-of-type {
+    margin-right: 5px;
+  }
+  #about-footer div img {
+    background-color: black;
+    border-radius: 2px;
+  }
+  #skill-btn {
+    top: 45%;
+  }
+  
+}
+
+$('#contact-text').css('padding','150px 20px 400px 20px');
+      $('#contact-top').css('height', '100px');
+      $('#about-footer div').css({'margin' : '', 'float' : 'right'});
+      $('#about-footer div img').eq(2).css({'margin-right' : '5px'});
+      $('#about-footer div img').css({'background-color' : 'black', 'border-radius' : '2px'});
+      $('#c-nav').css('margin-top', '40px');
+      $('#skill-btn').css('top', '45%');
+
 #about-title span {
 opacity: 0;
   }
