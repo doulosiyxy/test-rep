@@ -22,7 +22,7 @@ Contents:
   padding-left: 0;
   font-size: 1px;
   font-weight: 200;
-  font-family: lato;
+  font-family: font-family: lato, roboto, helvetica;
   text-decoration: none;
   transition: .2s ease;
   cursor: pointer;
@@ -40,7 +40,7 @@ nav {
 
 * {
     box-sizing: border-box;
-    font-family: lato, roboto, helvetica;
+    
 }
 
 body {
@@ -61,12 +61,12 @@ header h2, header h3 {
 header h2 {
   text-transform: uppercase;
   font-size: 22px;
-  font-family: lato;
+  font-family: font-family: lato, roboto, helvetica;
   font-weight: bold;
 }
 header h3 {
   font-size: 15px;
-  font-family: lato;
+  font-family: font-family: lato, roboto, helvetica;
   font-weight: 200;
 }
 
@@ -222,7 +222,7 @@ opacity: 0;
   padding-left: 0;
   font-size: 1px;
   font-weight: 800;
-  font-family: lato;
+  font-family: lato, roboto, helvetica;
   text-decoration: none;
   transition: .2s ease;
   cursor: pointer;
@@ -256,7 +256,7 @@ nav {
   padding: 0px 10px;
   font-size: 15px;
   font-weight: 100;
-  font-family: lato;
+  font-family: lato, roboto, helvetica;
   text-decoration: none;
   transition: .2s ease;
   cursor: pointer;  
@@ -270,7 +270,7 @@ nav {
   padding: 0px 10px;
   font-size: 15px;
   font-weight: 200;
-  font-family: lato;
+  font-family: lato, roboto, helvetica;
   text-decoration: none;
   transition: .2s ease;
   cursor: pointer;
@@ -345,7 +345,7 @@ float: right;
   margin: auto;
   text-transform: uppercase;
   font-size: 25px;
-  font-family: lato;
+  font-family: lato, roboto, helvetica;
   font-weight: bold;
   color: #fff;
   -webkit-animation: h2 2s, fade 2s 8s; /* Safari 4+ */
@@ -557,7 +557,7 @@ footer div {
 
 .projects h2 {
   color: white;
-  font-family: lato;
+  font-family: lato, roboto, helvetica;
   font-weight: 700;
   text-transformation: uppercase;
   margin: 10px 0;
@@ -569,7 +569,7 @@ footer div {
   max-width: 50%;
   color: white;
   font-size: 13px;
-  font-family: lato;
+  font-family: lato, roboto, helvetica;
   font-weight: 300;
   margin: 0 0;
   padding-left: 15px;
@@ -638,7 +638,7 @@ footer div {
   max-width: 900px;
   text-align: justify;
   margin: auto;
-  font-family: 'Roboto', sans-serif;
+  font-family: lato, roboto, helvetica;
   font-weight: 300;
   font-size: 1.5em;
   width: 90%;
@@ -649,7 +649,7 @@ footer div {
   max-width: 900px;
   text-align: justify;
   margin: auto;
-  font-family: 'Roboto', sans-serif;
+  font-family: lato, roboto, helvetica;
   font-weight: 300;
   font-size: 1.7em;
   width: 90%;
