@@ -87,83 +87,18 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 
   $('#contact-text').css('padding-bottom','2000px');
 
-  if ($(window).height() > 768 ) {
-  $('#about-title-wrap').css({"top": "30%"});
-    $('#skill-btn').on('click', function() {
-      $('#about-title-wrap').delay(840).animate({"top": "25%"}, 2300);
-    });
-  } else if ($(window).width() < 768 & $(window).width() >= 667) { 
-  $('#about-title-wrap').css({"top": "10%"});
-  $('.skl h3').css("font-size",  12); 
-    $('#skill-btn').on('click', function() {
-      $('.skl').css({"width" : "65px", "height" : "65px"});
-      $('#about-title-wrap').delay(840).animate({"top": "10%"}, 2000); 
-    });
-  } else if ($(window).width() < 667) { 
-  $('#about-nav div nav').removeClass('col-sm-12');
-  $('#about-title-wrap').css({"top": "10%"});
-  $('.skl h3').css("font-size",  12); 
-  $('#about-title').css("font-size",  25); 
-    $('#skill-btn').on('click', function() {
-      $('.skl').css({"width" : "65px", "height" : "65px"});
-      $('#about-title-wrap').delay(840).animate({"top": "1%"}, 2000); 
-    });
-  } else {
-    $('#skill-btn').on('click', function() {
-      $('#about-title-wrap').delay(840).animate({"top": "13%"}, 2300);
-    });
-  }
-  /*
-  if ($(window).width() < 737) {
-    $('header span a').eq(0).html('<i class="glyphicon glyphicon-home"></i>');
-    $('header span a').eq(1).html('<i class="glyphicon glyphicon-user"></i>');
-    $('header span a').eq(2).html('<i class="glyphicon glyphicon-th-large"></i>');
-    $('header span a').eq(3).html('<i class="glyphicon glyphicon-envelope"></i>');
-    $('.project-figure').css('max-width', '');
-    $('.project-figure img').css('width', '30%');
-    $('.projects p').css('font-size', '10px');
-    $('.projects h2').css('font-size', '20px');
-    $('#about-title').css('font-size', '15px');
-    $('#about-title-wrap').css("top", "35%");
-    $('#h-nav').css('top', '-20px');
-    $('#c-nav').css('margin-top', '10px');
-    $('#contact-text').css('padding','70px 0 600px 0');
-    $('#logo-icon').css({'width' : '120px', 'height' : '120px', 'margin-top' : '-30px', 'margin-left' : '20px'});
-    $('#about-nav nav').css({'padding-right' : '0px'});
-    $('#about-nav nav').css({'right' : '-20px'});
-  } 
-  
-  if ($(window).width() < 567) {
-      $('#contact-text').css('padding','150px 20px 400px 20px');
-      $('#contact-top').css('height', '100px');
-      $('#about-footer div').css({'margin' : '', 'float' : 'right'});
-      $('#about-footer div img').eq(2).css({'margin-right' : '5px'});
-      $('#about-footer div img').css({'background-color' : 'black', 'border-radius' : '2px'});
-      $('#c-nav').css('margin-top', '40px');
-      $('#skill-btn').css('top', '45%');
-      $('#skill-btn').on('click', function() { 
-        $('.skl').css({"width" : "100%", "height" : ""});
-        $('#about-title-wrap').delay(840).animate({"top": "1%"}, 2000).css('height','100%').css('overflow','scroll');
-        $('.skl-wrapper').css('max-width','100%');
-      });  
-   } 
-   
-   if ($(window).width() < 347) {
-     $('#h-nav').css('padding-top', '25px');
-     $('#c-nav').css({'margin-top' : '50px', 'margin-right' : '0px'});
-     $('#contact-nav nav').css({'padding-right' : '0px'});
-     $('#c-nav a').css({'padding-right' : '0px', 'padding-left' : '15px'});
-   } */
    
 } else if ($(window).height() > 767 ) {
   $('#skill-btn').on('click', function() {
-    $('#about-title-wrap').delay(840).animate({"top": "17%"}, 2300);
+    $('#about-title-wrap').delay(840).animate({"top": "0"}, 2300);
   });
 } else {
   $('#skill-btn').on('click', function() {
-    $('#about-title-wrap').delay(840).animate({"top": "5%"}, 2300);
+    $('#about-title-wrap').delay(840).animate({"top": "0"}, 2300);
   });
 }
+
+/*
 //mobile settings
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {	
 
@@ -178,7 +113,7 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
   	    $("#about-jumbotron").css('margin-bottom', 130 - (currPos/2) );
   	  }
   });	
-}
+}*/
 // Digital Clock
 $(document).ready(function() {
   //copyright year
@@ -256,6 +191,8 @@ setInterval(updateGradient,15);
     window.location.href='index.html';
   });
 });
+
+/*
 // scroll fade out function
 $(function() {
   var documentEl = $(document), 
@@ -268,4 +205,4 @@ $(function() {
 	  if (currScrollPos > elemOffsetTop) $this.css('opacity', 1 - (currScrollPos-elemOffsetTop)/400);					
 	});	
   });
-});
+});*/
