@@ -640,7 +640,7 @@ footer div {
   font-size: 11px;
   font-family: lato, roboto, sans-serif;
   font-weight: 300;
-  margin: 0 0;
+  margin: -2px 0;
   padding-left: 15px;
   float: left;
 }
@@ -699,7 +699,7 @@ footer div {
   font-size: 10px;
   font-family: lato, roboto, sans-serif;
   font-weight: 300;
-  margin: 0 0;
+  margin: -2px 0;
   padding-left: 15px;
   float: left;
 }
