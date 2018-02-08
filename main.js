@@ -113,7 +113,7 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
       $('#about-title-wrap').delay(840).animate({"top": "13%"}, 2300);
     });
   }
-  
+  /*
   if ($(window).width() < 737) {
     $('header span a').eq(0).html('<i class="glyphicon glyphicon-home"></i>');
     $('header span a').eq(1).html('<i class="glyphicon glyphicon-user"></i>');
@@ -153,7 +153,7 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
      $('#c-nav').css({'margin-top' : '50px', 'margin-right' : '0px'});
      $('#contact-nav nav').css({'padding-right' : '0px'});
      $('#c-nav a').css({'padding-right' : '0px', 'padding-left' : '15px'});
-   }
+   } */
    
 } else if ($(window).height() > 767 ) {
   $('#skill-btn').on('click', function() {
@@ -161,7 +161,7 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
   });
 } else {
   $('#skill-btn').on('click', function() {
-    $('#about-title-wrap').delay(840).animate({"top": "9%"}, 2300);
+    $('#about-title-wrap').delay(840).animate({"top": "5%"}, 2300);
   });
 }
 //mobile settings
@@ -191,55 +191,7 @@ $(document).ready(function() {
   $(document).ready(function() {
 	displayYear();
   });
-  function displayTime() {
-    var weekDay = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-   	var monthName = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];    
-   	var currentTime = new Date();
-    var hours = currentTime.getHours();
-    var minutes = currentTime.getMinutes();
-   	var seconds = currentTime.getSeconds();
-   	var changeColor = seconds % 2;
-   	var day = currentTime.getDay();
-   	var date = currentTime.getDate();
-   	var month = currentTime.getMonth();
-   	var year = currentTime.getYear();
-   	//below two vars grab array strings to supply elements at bottom.
-    var selectDay = weekDay[day];
-    var selectMonth = monthName[month];
-   	//this code turns the clock into a 12 hour with AM/PM
-   	var meridiem = "AM";
-   	if (hours > 12) {
-      hours = hours - 12;
-      meridiem = "PM";
-    }
-    // 0 AM and 0 PM should read as 12
-    if (hours === 0) {
-      hours = 12;    
-    } 
-    if (changeColor === 0) {
-      $('#all').removeClass('even').addClass('odd');
-    } else if (changeColor === 1) {
-      $('#all').removeClass('odd').addClass('even');
-    }    
-    // Below adds 0s to seconds, minutes, hours
-   	if (seconds < 10) {	
-      seconds = "0" + seconds;
-    }
-    if (minutes < 10) {
-      minutes = "0" + minutes;
-    }
-    if (hours < 10) {
-      hours = "0" + hours;
-    }
-   	var clockDiv = document.getElementById('clock');
-   	var dayDiv = document.getElementById('day');
-   	var dateDiv = document.getElementById('date');
-   	clockDiv.innerText = hours + ":" + minutes + ":" + seconds + " " + meridiem;
-    dayDiv.innerText = selectDay;
-    dateDiv.innerText = selectMonth + " " + date + " " + (year + 1900); 
-  }
-  setInterval(displayTime, 1000);
-});
+
 // gradient timing
 var colors = new Array(
 
@@ -297,96 +249,8 @@ function updateGradient() {
   }
 }
 setInterval(updateGradient,15);
-//menu bars
-function changeMenu(x) {
-    x.classList.toggle("change");
-}
-$('.menu-container').on('click', () => {
-	$('#hidden-nav').slideToggle();	
-});
-//instrument
-var cNote = document.getElementById('cAudio');
-$('#c').mousedown(function(){
-  cNote.currentTime = 0;
-  cNote.play();
-});
-var dNote = document.getElementById('dAudio');
-$('#d').mousedown(function(){
-  dNote.currentTime = 0;
-  dNote.play();
-});
-var eNote = document.getElementById('eAudio');
-$('#e').mousedown(function(){
-  eNote.currentTime = 0;
-  eNote.play();
-});
-var fNote = document.getElementById('fAudio');
-$('#f').mousedown(function(){
-  fNote.currentTime = 0;
-  fNote.play();
-});
-var gNote = document.getElementById('gAudio');
-$('#g').mousedown(function(){
-  gNote.currentTime = 0;
-  gNote.play();
-});
-var aNote = document.getElementById('aAudio');
-$('#a').mousedown(function(){
-  aNote.currentTime = 0;
-  aNote.play();
-});
-var bNote = document.getElementById('bAudio');
-$('#b').mousedown(function(){
-  bNote.currentTime = 0;
-  bNote.play();
-});
-// sun moon
-$(document).ready(function() {
-  $('#orb').click( function() {        
-    if ($('#orb').hasClass('sun')) {
-          $('#orb').removeClass('sun').addClass('moon');
-    }
-    else {
-      $('#orb').removeClass('moon').addClass('sun');
-    }
-    if ($('#sky').hasClass('day')) {
-      $('#sky').removeClass('day').addClass('night');
-    } else {
-        $('#sky').removeClass('night').addClass('day');
-    }
-    if ($('#moonspot1').hasClass('visible')) {
-      $('#moonspot1').removeClass('visible');
-    } else {
-        $('#moonspot1').addClass('visible');
-    }
-    if ($('#moonspot2').hasClass('visible')) {
-      $('#moonspot2').removeClass('visible');
-    } else {
-        $('#moonspot2').addClass('visible');
-    }
-    if ($('#moonspot3').hasClass('visible')) {
-      $('#moonspot3').removeClass('visible');
-    } else {
-      $('#moonspot3').addClass('visible');
-    }
-  });
- //
-  $('#about-banner-one').on('click', () => {
-    $('#timeline-div').slideToggle();
-    $('.skill-wrap').slideUp();
-  });
-	
-  $('#about-banner-two').on('click', () => {
-    $('#timeline-div').slideUp();
-    $('#skills-wrap-one').slideToggle();
-    $('#skills-wrap-two').slideUp();
-  });
-	
-  $('#about-banner-three').on('click', () => {
-    $('#timeline-div').slideUp();
-    $('#skills-wrap-one').slideUp();
-    $('#skills-wrap-two').slideToggle();
-  });
+
+
 	// hyperlink
   $('.logo').on('click', () => {
     window.location.href='index.html';
@@ -404,39 +268,4 @@ $(function() {
 	  if (currScrollPos > elemOffsetTop) $this.css('opacity', 1 - (currScrollPos-elemOffsetTop)/400);					
 	});	
   });
-});
-// scroll animations move and fade in
-$(window).on('scroll', function() {
-  var currPos = $(document).scrollTop();
-
-  if(currPos < 120) {
-    $('.animate').css('margin-top', 100 - currPos);
-  }
-			
-});
-  
-$(function() {
-  var documentEl = $(document), 
-  fadeElemA = $('.animate');
-  documentEl.on('scroll', function() {
-    var currScrollPos = documentEl.scrollTop();
-	fadeElemA.each(function() {
-	  var $this = $(this),
-	  elemOffsetTop = $this.offset().top;
-	if (currScrollPos < elemOffsetTop ) $this.css('opacity', 0 + ((currScrollPos + 10)/(elemOffsetTop - 150)));				
-	});	
-  });
-});
-//error handlers resets top elements opacity to 1.
-$(window).on('scroll', function() {
-  var docTop = $(document).scrollTop();
-  if (docTop === 0) {	
-    $(".jumbotron").css('opacity', 1);
-	$(".clock").css('opacity', 1);
-  }
-});
-
-$('#myBtn').on('click', function() {
-  $(".jumbotron").css('opacity', 1);
-  $(".clock").css('opacity', 1);
 });
