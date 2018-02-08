@@ -98,22 +98,6 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
   });
 }
 
-/*
-//mobile settings
-if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {	
-
-  
-  $('#main-nav').css('margin-left', 'auto');
-  if($(window).width() < 321) {
-    $('#logo-icon').css('font-size', '25px');
-  }
-  $(window).on('scroll', function() {
-    var currPos = $(document).scrollTop();
-      if(currPos < 300) {
-  	    $("#about-jumbotron").css('margin-bottom', 130 - (currPos/2) );
-  	  }
-  });	
-}*/
 // Digital Clock
 $(document).ready(function() {
   //copyright year
@@ -191,18 +175,3 @@ setInterval(updateGradient,15);
     window.location.href='index.html';
   });
 });
-
-/*
-// scroll fade out function
-$(function() {
-  var documentEl = $(document), 
-	  fadeElem = $('.fade-scroll');
-  documentEl.on('scroll', function() {
-    var currScrollPos = documentEl.scrollTop();
-    fadeElem.each(function() {
-	  var $this = $(this),
-	  elemOffsetTop = $this.offset().top;
-	  if (currScrollPos > elemOffsetTop) $this.css('opacity', 1 - (currScrollPos-elemOffsetTop)/400);					
-	});	
-  });
-});*/
