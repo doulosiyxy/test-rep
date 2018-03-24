@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: muli, sans-serif;
 }
@@ -26,7 +30,8 @@ section {
 
 section .row {
   position: relative;
-  display: flex; 
+  display: flex;
+  flex-wrap: wrap; 
   max-width: 750px;
   margin: 0 auto;
 }
@@ -80,7 +85,24 @@ button:hover {
 }
 
 #products-row {
+  display: flex;
   margin-top: 10px;
+  padding: 0 0 !important;
+}
+
+figure {
+  border: 1px solid black;
+  padding: 0 0 !important;
+  margin-left auto;
+  margin-right auto;
+  column-gap: 20px;	
+}
+
+.product {
+  width: 100%;
+  height: inherit;
+  border: 1px dashed blue;
+  padding-bottom: 230px;
 }
 
 section .row img {
