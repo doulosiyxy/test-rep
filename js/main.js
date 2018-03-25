@@ -434,7 +434,8 @@ var product = [
     "popularity": 40
   }
 ];
- 
+
+//promotion tab function
 function promotionTab(sale) {
   var promo = sale;
   if (promo === "On sale") {
@@ -447,17 +448,43 @@ function promotionTab(sale) {
 }
 
 // sort functions
-
 function pop(a, b) {
   return (a.popularity - b.popularity);
 }
 
+function asc(a, b) {
+  return (a.price.substr(1) - b.price.substr(1));
+}
+
+function des(a, b) {
+  return (b.price.substr(1) - a.price.substr(1));
+}
+
 $('#popularity').on('click', function() {
-  product = product.sort(pop);
+  product = product.sort(pop).reverse();
+  $('.dropdown-toggle').text('Popularity');
+  document.getElementById('products-row').innerHTML = `
+  ${product.map(productTemplate).join('')}
+  `
+});
+
+$('#price-ascending').on('click', function() {
+  product = product.sort(asc);
+  $('.dropdown-toggle').text('Price ascending');
+  document.getElementById('products-row').innerHTML = `
+  ${product.map(productTemplate).join('')} 
+ `
+});
+
+$('#price-descending').on('click', function() {
+  product = product.sort(des);
+  $('.dropdown-toggle').text('Price descending');
+  document.getElementById('products-row').innerHTML = `
+  ${product.map(productTemplate).join('')} 
+ `
 });
 
 // template literal function
-
 function productTemplate(product) {
   return `
   <figure class="col-sm-4">
@@ -476,13 +503,12 @@ function productTemplate(product) {
 }
 
 // calls and outputs template literal function above
-
 document.getElementById('products-row').innerHTML = `
 ${product.map(productTemplate).join('')}
 `
 
 //animations
-
+/*
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 
 $('.overlay').on('click', function () {
@@ -516,4 +542,4 @@ $('.overlay').on('mouseleave', function () {
     bottom: "-50px"
   }, 200);
 });
-}
+}*/
