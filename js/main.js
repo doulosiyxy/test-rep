@@ -435,13 +435,22 @@ var product = [
   }
 ];
 
-//promotion tab function
-function promotionTab(sale) {
+//inital promotion tab function 
+/*function promotionTab(sale) {
   var promo = sale;
   if (promo === "On sale") {
     return 'block'
   } else if (promo === "Clearance") {
     return 'block'  
+  } else {
+    return 'none'
+  }
+}*/
+//condensed promotion tab function 
+function promotionTab(sale) {
+  var promo = sale;
+  if (promo) {
+    return 'block'
   } else {
     return 'none'
   }
@@ -487,11 +496,13 @@ $('#price-descending').on('click', function() {
 // template literal function
 function productTemplate(product) {
   return `
-  <figure class="col-sm-4">
+  <figure id="fig" class="col-sm-4">
         <div class="product" style="background: url(${product.image.url}) no-repeat center center" alt="${product.image.name}">
           <div class="promotion-tab" style="display: ${promotionTab(product.promotion)};">${product.promotion}</div>
       	  <div class="overlay">
-      	    <div class="prod-name">${product.name}</div>
+      	    <div class="prod-name-wrapper">
+      	      <p class="prod-name">${product.name}</p>
+      	    </div>
       	    <div class="price-container"><p class="from-txt">FROM</p>
       	      <p class="price"><strong>${product.price.slice(0, -3)}<sup>.${product.price[product.price.length - 2] + product.price[product.price.length - 1] }</sup></strong></p>
       	    </div>
@@ -506,40 +517,3 @@ function productTemplate(product) {
 document.getElementById('products-row').innerHTML = `
 ${product.map(productTemplate).join('')}
 `
-
-//animations
-/*
-if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-
-$('.overlay').on('click', function () {
-  var bottom = $(this).css("bottom");
-    if(bottom === "-50px") {
-      $(this).animate({
-        bottom: "0px"
-      }, 300);
-      $('.overlay').not(this).each(function(){
-         $(this).animate({
-        bottom: "-50px"
-      }, 300);
-     });
-    } else {
-      $(this).animate({
-        bottom: "-50px"
-      }, 200);
-    }
-});
-
-} else {
-
-$('.overlay').on('mouseover', function () {
-  $(this).animate({
-    bottom: "0px"
-  }, 300);
-});
-
-$('.overlay').on('mouseleave', function () {
-  $(this).animate({
-    bottom: "-50px"
-  }, 200);
-});
-}*/

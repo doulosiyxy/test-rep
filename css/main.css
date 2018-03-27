@@ -1,6 +1,5 @@
 * {
   box-sizing: border-box;
-  
 }
 
 body {
@@ -89,9 +88,14 @@ button:hover {
 }
 
 #products-row {
+  display: -webkit-flex; /* Safari */
+  -webkit-flex-wrap: wrap; /* Safari 6.1+ */
   display: flex;
+  flex-wrap: wrap;
   margin-top: 10px;
   padding: 0 0 !important;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 figure {
@@ -100,6 +104,7 @@ figure {
   border-left: 10px solid white;
   border-right: 10px solid white;
 }
+
 
 .product {
   width: 100%;
@@ -111,7 +116,8 @@ figure {
   background-color: #505050;
   position: absolute;
   bottom: -50px;
-  width: 100%;
+  width: inherit;
+  max-width: inherit; 
   height: 45%;
   padding: 10px 10px;
   transition: .3s ease-in-out;
@@ -148,18 +154,28 @@ figure {
   text-transform: uppercase;
 }
 
-.prod-name {
+.prod-name-wrapper {
   display: block;
   position: absolute;
   top: 0;
+  left: 15px;
+  width: 50%;
+  max-width: 50%;
+  max-height: 50%;
+  padding-bottom: 50px;
+}
+
+.prod-name {
+  position: absolute;
+  top: 7px;
+  right: 0;
   bottom: 0;
+  left: 0;
   color: white;
-  font-size: 12px;
-  font-weight: bold;
-  line-height: 13px;	
-  width: 65%;
-  height: 50%;
-  padding: 9% 0;;
+  font-size: .7rem;
+  font-weight: bold;	
+  width: 100%;
+  height: auto;
 }
 
 .price-container {
@@ -200,7 +216,10 @@ sup {
   color: white;
   background-color: #f56606;
   border: none;
- 
+}
+
+.view-btn:hover {
+  filter: brightness(110%);
 }
 
 section .row img {
@@ -212,3 +231,36 @@ section .row img {
   margin: 0 0 30px;
 }
 
+@media only screen and (max-width: 575px) {
+  #products-row {
+    max-width: 310px;
+    display: flex;
+    margin-top: 10px;
+    padding: 0 0 !important;
+  }
+  
+  .btn {
+    margin-bottom: 10px;
+  }  
+  
+  figure {
+    max-width: 265px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media only screen and (min-width: 575px) and (max-width: 767px) {
+  figure {
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+  }
+
+  .btn {
+    margin-bottom: 10px;
+  }  
+  .view-btn {
+    bottom: 10px;
+    left: 10px;
+  }
+}
