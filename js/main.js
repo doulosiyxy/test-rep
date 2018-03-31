@@ -1,5 +1,5 @@
 // JSON array
-/*var product = [
+var product = [
   {
     "name": "Smooth Tidytips",
     "image": {
@@ -433,11 +433,7 @@
     "url": "products/42",
     "popularity": 40
   }
-];*/
-
-/*$.getJSON('product-data.json', function (data) {
-  console.log('success');
-});*/
+];
 
 //inital promotion tab function 
 /*function promotionTab(sale) {
