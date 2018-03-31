@@ -435,9 +435,9 @@
   }
 ];*/
 
-$.getJSON('product-data.json', function (data) {
+/*$.getJSON('product-data.json', function (data) {
   console.log('success');
-});
+});*/
 
 //inital promotion tab function 
 /*function promotionTab(sale) {
