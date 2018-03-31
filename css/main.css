@@ -25,6 +25,10 @@ header img {
   width: 240px;
 }
 
+header img:hover {
+  cursor: pointer;
+}
+
 section {
   margin-top: 30px;
 }

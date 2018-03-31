@@ -446,6 +446,7 @@ var product = [
     return 'none'
   }
 }*/
+
 //condensed promotion tab function 
 function promotionTab(sale) {
   var promo = sale;
@@ -518,3 +519,7 @@ function productTemplate(product) {
 document.getElementById('products-row').innerHTML = `
 ${product.map(productTemplate).join('')}
 `
+//logo hyperlink
+$('#logo').on('click', function() {
+  window.location.href='index.html';  
+});
