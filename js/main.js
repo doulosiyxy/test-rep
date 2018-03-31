@@ -483,6 +483,7 @@ $('#price-ascending').on('click', function() {
   document.getElementById('products-row').innerHTML = `
   ${product.map(productTemplate).join('')} 
  `
+ 
 });
 
 $('#price-descending').on('click', function() {
@@ -496,7 +497,7 @@ $('#price-descending').on('click', function() {
 // template literal function
 function productTemplate(product) {
   return `
-  <figure id="fig" class="col-sm-4">
+  <figure class="col-sm-4 fig">
         <div class="product" style="background: url(${product.image.url}) no-repeat center center" alt="${product.image.name}">
           <div class="promotion-tab" style="display: ${promotionTab(product.promotion)};">${product.promotion}</div>
       	  <div class="overlay">

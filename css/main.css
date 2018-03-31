@@ -105,7 +105,6 @@ figure {
   border-right: 10px solid white;
 }
 
-
 .product {
   width: 100%;
   height: inherit;
@@ -129,8 +128,7 @@ figure {
   bottom: 0px;
   width: inherit;
   height: 45%;
-  padding: 10px 10px;
-  
+  padding: 10px 10px; 
 }
 
 .overlay:hover {
@@ -198,8 +196,7 @@ figure {
   font-size: 20px;
   clear: left;
   color: #00f0ff;
-  float: left;
-  font-size: 
+  float: left; 
 }
 
 sup {
