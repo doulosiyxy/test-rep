@@ -196,7 +196,11 @@ figure {
   font-size: 20px;
   clear: left;
   color: #00f0ff;
+<<<<<<< HEAD
   float: left; 
+=======
+  float: left;
+>>>>>>> 5f5ae3bb15a3cf93299da1b3abdac67296a6aeee
 }
 
 sup {
