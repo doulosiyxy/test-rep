@@ -436,7 +436,7 @@ var product = [
 
 //mobile click event
 $('.overlay').on('click', function() {
-  $(this).animate({bottom: -50px});
+  $(this).animate({bottom: "-50px"});
 });
 
 //inital promotion tab function 
