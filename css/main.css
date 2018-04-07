@@ -142,12 +142,6 @@ figure {
   transform: translate(0, -50px);
 }
 
-.overlay:active {
-  -ms-transform: translate(0, -50px); 
-  -webkit-transform: translate(0, -50px); 
-  transform: translate(0, -50px);
-}
-
 .promotion-tab {
   background-color: #0068d3;
   right: 0;
