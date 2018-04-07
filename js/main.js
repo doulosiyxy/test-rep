@@ -412,7 +412,8 @@ var product = [
     "url": "products/40",
     "popularity": 7
   },
-  { "name": "Cara De Caballo",
+  { 
+    "name": "Cara De Caballo",
     "image": {
       "url": "https://picsum.photos/400/250?image=960",
       "name": "erat id mauris"
