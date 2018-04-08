@@ -476,6 +476,11 @@ $('#popularity').on('click', function() {
   document.getElementById('products-row').innerHTML = `
   ${product.map(productTemplate).join('')}
   `
+  // click events
+  $('.overlay').on('click', function() {
+    $(this).toggleClass('overlay-large');
+    $('.overlay').not(this).removeClass('overlay-large').addClass('overlay');
+  });
 });
 
 $('#price-ascending').on('click', function() {
@@ -484,7 +489,11 @@ $('#price-ascending').on('click', function() {
   document.getElementById('products-row').innerHTML = `
   ${product.map(productTemplate).join('')} 
  `
- 
+  // click events
+  $('.overlay').on('click', function() {
+    $(this).toggleClass('overlay-large');
+    $('.overlay').not(this).removeClass('overlay-large').addClass('overlay');
+  });
 });
 
 $('#price-descending').on('click', function() {
@@ -493,6 +502,11 @@ $('#price-descending').on('click', function() {
   document.getElementById('products-row').innerHTML = `
   ${product.map(productTemplate).join('')} 
  `
+ // click events
+  $('.overlay').on('click', function() {
+    $(this).toggleClass('overlay-large');
+    $('.overlay').not(this).removeClass('overlay-large').addClass('overlay');
+  });
 });
 
 // template literal function
@@ -523,17 +537,9 @@ ${product.map(productTemplate).join('')}
 $('#logo').on('click', function() {
   window.location.href='index.html';  
 });
-<<<<<<< HEAD
-=======
-
->>>>>>> 758c82e43d0d6034e0356f40578eff090aca6380
 
 // click events
 $('.overlay').on('click', function() {
-  $(this).toggleClass('overlay-large');
-<<<<<<< HEAD
+  $(this).toggleClass('overlay-large')
+  $('.overlay').not(this).removeClass('overlay-large').addClass('overlay');
 });
-=======
-});
-
->>>>>>> 758c82e43d0d6034e0356f40578eff090aca6380
