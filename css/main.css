@@ -123,7 +123,7 @@ figure {
   max-width: inherit; 
   height: 45%;
   padding: 10px 10px;
-  transition: .3s ease-in-out;
+  transition: .2s ease-in-out;
 }
 
 .overlay-large {
@@ -133,13 +133,15 @@ figure {
   width: inherit;
   height: 45%;
   padding: 10px 10px; 
+  transition: .2s ease-in-out;
 }
 
 .overlay:hover {
   cursor: pointer;
-  -ms-transform: translate(0, -50px); 
+  bottom: 0px;
+  /*-ms-transform: translate(0, -50px); 
   -webkit-transform: translate(0, -50px); 
-  transform: translate(0, -50px);
+  transform: translate(0, -50px);*/
 }
 
 .promotion-tab {

@@ -523,3 +523,9 @@ ${product.map(productTemplate).join('')}
 $('#logo').on('click', function() {
   window.location.href='index.html';  
 });
+
+// click events
+
+$('.overlay').on('click', function() {
+  $(this).toggleClass('overlay-large');
+});
