@@ -523,12 +523,8 @@ ${product.map(productTemplate).join('')}
 $('#logo').on('click', function() {
   window.location.href='index.html';  
 });
-<<<<<<< HEAD
 
 // click events
-
 $('.overlay').on('click', function() {
   $(this).toggleClass('overlay-large');
 });
-=======
->>>>>>> 0040ef71068d1fd5b7f8677cf451349b79133d90

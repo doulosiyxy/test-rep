@@ -138,8 +138,8 @@ figure {
 
 .overlay:hover {
   cursor: pointer;
-  bottom: 0px;
-  /*-ms-transform: translate(0, -50px); 
+  /*bottom: 0px;
+  -ms-transform: translate(0, -50px); 
   -webkit-transform: translate(0, -50px); 
   transform: translate(0, -50px);*/
 }
