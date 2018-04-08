@@ -412,7 +412,7 @@ var product = [
     "url": "products/40",
     "popularity": 7
   },
-  {
+  { 
     "name": "Cara De Caballo",
     "image": {
       "url": "https://picsum.photos/400/250?image=960",
@@ -523,9 +523,12 @@ ${product.map(productTemplate).join('')}
 $('#logo').on('click', function() {
   window.location.href='index.html';  
 });
+<<<<<<< HEAD
 
 // click events
 
 $('.overlay').on('click', function() {
   $(this).toggleClass('overlay-large');
 });
+=======
+>>>>>>> 0040ef71068d1fd5b7f8677cf451349b79133d90
