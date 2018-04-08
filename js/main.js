@@ -540,11 +540,6 @@ $('#logo').on('click', function() {
 
 // click events
 $('.overlay').on('click', function() {
-<<<<<<< HEAD
   $(this).toggleClass('overlay-large')
   $('.overlay').not(this).removeClass('overlay-large').addClass('overlay');
 });
-=======
-  $(this).toggleClass('overlay-large');
-});
->>>>>>> 6b4d829640b12bab9959c365a617abd35cac81af
