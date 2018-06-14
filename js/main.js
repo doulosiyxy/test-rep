@@ -560,4 +560,8 @@ $('#logo').on('click', function() {
 $('.overlay').on('click', function() {
   $(this).toggleClass('overlay-large')
   $('.overlay').not(this).removeClass('overlay-large').addClass('overlay');
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> def71e69edd97bf94188500d4f993dae56c3320b
